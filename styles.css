@@ -41,6 +41,8 @@ h2 { display: inline-block; margin: 0 0 32px; font-size: clamp(2rem, 4vw, 2.7rem
 h2::after { content: ""; display: block; width: 44px; height: 4px; margin-top: 10px; border-radius: 3px; background: var(--purple); }
 .lead { margin-top: 32px; color: #36353d; font-size: 1.08rem; }
 .overview-lead { margin-top: 0; }
+.overview-video { margin: 0 0 30px; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: #000; box-shadow: var(--shadow); }
+.overview-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
 .section-intro { max-width: 720px; margin: -12px 0 30px; color: var(--muted); font-size: 1.02rem; }
 .figure-card { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: #fff; box-shadow: var(--shadow); }
 .figure-card img { width: 100%; }
@@ -116,7 +118,7 @@ footer { margin-top: 80px; padding: 28px 0; color: var(--muted); border-top: 1px
   .runtime-grid { grid-template-columns: 1fr; }
   .result-block { margin-top: 38px; }
   .analysis-card, .runtime-card { padding: 12px; border-radius: 18px; }
-  .figure-card, .video-card, .table-card, .bib-card { border-radius: 18px; }
+  .figure-card, .video-card, .overview-video, .table-card, .bib-card { border-radius: 18px; }
   #method .figure-card img { padding: 12px 12px 0; }
   #results .result-figure img { padding: 12px 12px 0; }
   .runtime-figure img { padding: 12px 12px 0; }

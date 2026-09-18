@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ProTracer: Proprioception-Guided Failure Diagnosis in Robot Manipulation">
   <title>ProTracer | Proprioception-Guided Failure Diagnosis</title>
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
   <aside class="toc" aria-label="Contents">
@@ -37,6 +37,12 @@
   <main class="container">
     <section id="overview">
       <h2>Overview</h2>
+      <figure class="overview-video">
+        <video controls preload="metadata" playsinline>
+          <source src="assets/ProTracer_project_page_video_female_bgm_ariv.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </figure>
       <p class="lead overview-lead">We introduce <strong>ProTracer</strong>, a training-free framework for comprehensive robot manipulation failure analysis. It uses proprioceptive dynamics to find temporally informative action boundaries and converts robot-state signals into structured narratives that a vision-language model can reason over together with visual observations.</p>
       <p>ProTracer supports failure detection, categorization, explanation, avoidance, and the new task of <strong>failure onset localization</strong>: identifying the earliest moment when an execution deviates from a valid task-completion trajectory and ultimately leads to failure. We also introduce <strong>FailTime</strong>, a benchmark with synchronized visual and proprioceptive observations and frame-level onset annotations.</p>
     </section>
