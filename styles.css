@@ -26,9 +26,10 @@ a { color: inherit; }
 .hero { position: relative; overflow: hidden; padding: 112px 0 96px; text-align: center; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 50% 0%, rgba(115,88,200,.16), transparent 43%), #fbfbfd; }
 .venue { margin: 0 0 18px; color: var(--purple); font-size: .76rem; font-weight: 800; letter-spacing: .14em; }
 h1 { max-width: 970px; margin: 0 auto 28px; font-size: clamp(2.7rem, 5.4vw, 5rem); font-weight: 730; line-height: 1.03; letter-spacing: -.055em; }
-.brand-title { display: flex; align-items: center; justify-content: center; gap: clamp(18px, 3vw, 36px); max-width: 1080px; text-align: left; }
-.title-logo { flex: 0 0 auto; width: clamp(170px, 20vw, 235px); border-radius: 24px; }
+.brand-title { display: flex; align-items: center; justify-content: center; gap: clamp(16px, 2.4vw, 28px); max-width: 1060px; font-size: clamp(2.2rem, 4.35vw, 4rem); text-align: left; }
+.title-logo { flex: 0 0 auto; width: clamp(118px, 13vw, 150px); border-radius: 50%; }
 .title-copy { color: var(--ink); }
+.title-brand { color: var(--purple); }
 .authors { margin: 0; font-size: 1.02rem; font-weight: 620; }
 .authors a { text-decoration: none; text-underline-offset: 3px; }
 .authors a:hover { color: var(--purple); text-decoration: underline; }
@@ -41,7 +42,7 @@ h1 { max-width: 970px; margin: 0 auto 28px; font-size: clamp(2.7rem, 5.4vw, 5rem
 
 .paper-page { background: #f5f5f7; }
 .paper-hero { position: relative; padding: 68px 0 54px; text-align: center; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 50% 0%, rgba(115,88,200,.16), transparent 48%), #fbfbfd; }
-.paper-hero h1 { max-width: 980px; margin-bottom: 24px; font-size: clamp(2.15rem, 4.4vw, 4rem); }
+.paper-hero h1 { max-width: 980px; margin-bottom: 24px; font-size: clamp(2rem, 3.8vw, 3.55rem); }
 .paper-back { position: absolute; top: 24px; color: var(--purple); font-size: .86rem; font-weight: 700; text-decoration: none; }
 .paper-back:hover { text-decoration: underline; text-underline-offset: 3px; }
 .paper-shell { width: min(1180px, calc(100% - 42px)); height: min(82vh, 1040px); margin: 36px auto 0; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: #fff; box-shadow: var(--shadow); }
@@ -124,7 +125,7 @@ footer { margin-top: 80px; padding: 28px 0; color: var(--muted); border-top: 1px
   .hero { padding: 62px 0 54px; }
   h1 { font-size: 2.45rem; }
   .brand-title { flex-direction: column; gap: 8px; text-align: center; }
-  .title-logo { width: 170px; }
+  .title-logo { width: 120px; }
   .authors br { display: none; }
   .project-links { flex-wrap: wrap; }
   .paper-hero { padding: 68px 0 44px; }

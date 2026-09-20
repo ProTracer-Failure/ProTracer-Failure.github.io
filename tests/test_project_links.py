@@ -91,13 +91,13 @@ class ProjectLinksTest(unittest.TestCase):
             affiliation, Path("paper/index.html").read_text(encoding="utf-8")
         )
 
-    def test_project_logo_replaces_protracer_prefix_and_is_the_favicon(self):
+    def test_project_logo_precedes_protracer_prefix_and_is_the_favicon(self):
         logo_path = "assets/protracer-logo.png"
         title = "Proprioception-Guided Failure Diagnosis in Robot Manipulation"
         logo_digest = hashlib.sha256(Path(logo_path).read_bytes()).hexdigest()
 
         self.assertEqual(
-            "85984801a1e0392d96f1005f5adc34a71ec9d9cfc9a20ed6144cb73eede64969",
+            "3acfad9ee3cea06de423289137fed53bd94b174a037c02f71b20ef735038bd04",
             logo_digest,
         )
         for page in (Path("index.html"), Path("paper/index.html")):
@@ -106,7 +106,7 @@ class ProjectLinksTest(unittest.TestCase):
             self.assertIn("protracer-logo.png", source)
             self.assertIn(f'alt="ProTracer"', source)
             self.assertIn(title, source)
-            self.assertNotIn("<span>ProTracer:</span>", source)
+            self.assertIn('<span class="title-brand">ProTracer:</span>', source)
 
 
 if __name__ == "__main__":
