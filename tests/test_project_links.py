@@ -35,13 +35,13 @@ class LinkParser(HTMLParser):
 
 
 class ProjectLinksTest(unittest.TestCase):
-    def test_failtime_hugging_face_dataset_is_linked(self):
+    def test_failtime_data_is_linked(self):
         parser = LinkParser()
         parser.feed(Path("index.html").read_text(encoding="utf-8"))
 
         self.assertIn(
             (
-                "Hugging Face",
+                "Data",
                 "https://huggingface.co/datasets/ChangUoA/FailTime",
                 True,
             ),
