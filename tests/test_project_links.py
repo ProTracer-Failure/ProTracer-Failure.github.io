@@ -81,6 +81,16 @@ class ProjectLinksTest(unittest.TestCase):
             source,
         )
 
+    def test_project_and_paper_pages_show_the_full_affiliation(self):
+        affiliation = (
+            "Australian Institute for Machine Learning, Adelaide University"
+        )
+
+        self.assertIn(affiliation, Path("index.html").read_text(encoding="utf-8"))
+        self.assertIn(
+            affiliation, Path("paper/index.html").read_text(encoding="utf-8")
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
