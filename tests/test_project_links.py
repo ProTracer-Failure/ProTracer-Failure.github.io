@@ -1,4 +1,5 @@
 from html.parser import HTMLParser
+import hashlib
 from pathlib import Path
 import unittest
 
@@ -65,6 +66,20 @@ class ProjectLinksTest(unittest.TestCase):
         self.assertIn('data="ProTracer_Arxiv.pdf"', paper_page)
         self.assertIn('href="ProTracer_Arxiv.pdf"', paper_page)
         self.assertIn("download", paper_page)
+
+    def test_overview_video_uses_the_nine_second_poster(self):
+        poster = Path("assets/ProTracer_project_page_video_frame_0009.jpg")
+        digest = hashlib.sha256(poster.read_bytes()).hexdigest()
+        source = Path("index.html").read_text(encoding="utf-8")
+
+        self.assertEqual(
+            "386c50ef71884d3606e88ad58ff0fbf6777bf3fde5b1e715199c4f907297b459",
+            digest,
+        )
+        self.assertIn(
+            'poster="assets/ProTracer_project_page_video_frame_0009.jpg?v=9s"',
+            source,
+        )
 
 
 if __name__ == "__main__":
