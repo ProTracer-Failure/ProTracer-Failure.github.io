@@ -35,6 +35,15 @@ class LinkParser(HTMLParser):
 
 
 class ProjectLinksTest(unittest.TestCase):
+    def test_arxiv_paper_is_linked(self):
+        parser = LinkParser()
+        parser.feed(Path("index.html").read_text(encoding="utf-8"))
+
+        self.assertIn(
+            ("arXiv", "https://arxiv.org/pdf/2609.21369", True),
+            parser.links,
+        )
+
     def test_failtime_data_is_linked(self):
         parser = LinkParser()
         parser.feed(Path("index.html").read_text(encoding="utf-8"))
